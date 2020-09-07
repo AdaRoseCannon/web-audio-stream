@@ -8,7 +8,7 @@
 		"lint": "eslint *.js --ignore-pattern test*",
 		"test": "echo No tests for node available",
 		"test:browser": "budo test.js",
-		"build:writable": "rollup -c rollup.config.js -i ./writable.js -o writable.esm.js | terser -o ./writable.esm.min.js --module --source-map -- ./writable.esm.js; du -h ./writable.esm.js ./writable.esm.min.js"
+		"build:writable": "rollup -c rollup.config.js -m inline -i ./writable.js -o writable.esm.js | terser -o ./writable.esm.min.js --module --source-map -- ./writable.esm.js; du -h ./writable.esm.js ./writable.esm.min.js"
 	},
 	"repository": {
 		"type": "git",

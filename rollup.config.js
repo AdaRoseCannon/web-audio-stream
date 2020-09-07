@@ -11,13 +11,13 @@ export default {
 		intro: "const global = self | window | {};",
 	},
 	plugins: [
+		commonjs(),
 		resolve({
 			browser: true,
 			extensions: [".js", ".mjs"], // Default: ['.js']
 			preferBuiltins: false,
 		}),
-		globals(),
 		builtins(),
-		commonjs(),
+		globals(),
 	],
 };
