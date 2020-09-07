@@ -7,6 +7,7 @@ import builtins from "rollup-plugin-node-builtins";
 export default {
 	output: {
 		format: "esm",
+		intro: "const global = self | window | {};",
 	},
 	plugins: [
 		resolve({
